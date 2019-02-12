@@ -37,6 +37,7 @@ public class DrawDice extends SurfaceView {
     @Override
     protected void onDraw(Canvas canvas){
         Bitmap dieImage = BitmapFactory.decodeResource(getResources(), R.drawable.wimpoutdice);
-        canvas.drawBitmap(dieImage, 500.0f, 500.0f, null);
+        Bitmap bigDieImage = Bitmap.createScaledBitmap(dieImage,800, 500, false);
+        canvas.drawBitmap(bigDieImage, 550.0f, 175.0f, null);
     }
 }
